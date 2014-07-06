@@ -6,7 +6,7 @@ app.use(express.static(__dirname + '/public'))
 
 var buff = new Buffer(32);
 buff = fs.readFileSync("index.html");
-var message = buff.toString();
+var message = buff.toString('utf-8');
 console.log(message);
 
 app.get('/', function(request, response) {
