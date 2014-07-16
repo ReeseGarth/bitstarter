@@ -47,7 +47,7 @@ var loadChecks = function(checksfile) {
 
 var checkHtmlFile = function(htmlfile, checksfile) {
     $ = cheerioHtmlFile(htmlfile);
-    var checks = loadchecks(checksfile).sort();
+    var checks = loadChecks(checksfile).sort();
     var out = {};
     for(var ii in checks) {
 	var present = $(checks[ii]).length > 0;
